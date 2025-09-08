@@ -5,6 +5,12 @@ export interface HomeProps {
   setLanguage: React.Dispatch<React.SetStateAction<Language>>;
 }
 
+export interface ExtendedHomeProps extends HomeProps {
+  loading: boolean;
+  setLoading: (val: boolean) => void;
+}
+
 export interface ComponentProps {
   language: Language;
 }
+

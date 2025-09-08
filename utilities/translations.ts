@@ -6,8 +6,8 @@ const translations = {
     // Sidebar
     spellChecker: "მართლმწერი",
     textCompare: "ტექსტის შედარება",
-    speechToText: "ხმა ტექსტი",
-    textToSpeech: "ტექსტი ხმა",
+    speech: "ხმა",
+    text: "ტექსტი",
     pdfConvert: "PDF კონვერცია",
     // Loading
     converting: "ხორციელდება კონვერტაცია... გმადლობთ მოთმინებისთვის",
@@ -19,8 +19,8 @@ const translations = {
     // Sidebar
     spellChecker: "Spell Checker",
     textCompare: "Text Comparison",
-    speechToText: "Speech to Text",
-    textToSpeech: "Text to Speech",
+    speech: "Speech",
+    text: "Text",
     pdfConvert: "PDF Conversion",
     // Loading
     converting: "Converting... Thank you for your patience",
