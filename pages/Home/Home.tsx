@@ -95,7 +95,7 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
         <div className="flex items-center gap-6 max-sm:flex-col max-sm:items-start">
           <div>
             <select
-              className="border rounded-lg py-2 px-3 max-sm:w-[288px]"
+              className="border rounded-lg py-2 px-3 max-sm:w-72"
               name="language"
               id="language-select"
               value={language}
@@ -115,10 +115,10 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
             <p>{t.keepFormat}</p>
           </div>
         </div>
-        <hr className="text-[#EDEDED] mt-[17px]" />
+        <hr className="text-[#EDEDED] mt-4" />
         <div className="flex flex-col items-center gap-8">
           <div className="flex items-center gap-3 max-sm:flex-col">
-            <div className="bg-[#F0F7FF] w-[542px] h-[432px] mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-[330px] max-sm:w-[288px] max-sm:h-[190px]">
+            <div className="bg-[#F0F7FF] w-135 h-108 mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-83 max-sm:w-72 max-sm:h-48">
               {highlightedA ? (
                 highlightedA
               ) : (
@@ -135,7 +135,7 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
 
             <img src="Arrow.svg" className="w-8 h-8 max-sm:rotate-90" alt="Arrow" />
 
-            <div className="bg-[#F0F7FF] w-135 h-108 mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-[330px] max-sm:w-[280px] max-sm:h-[190px]">
+            <div className="bg-[#F0F7FF] w-135 h-108 mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-83 max-sm:w-70 max-sm:h-480">
               {highlightedB ? (
                 highlightedB
               ) : (

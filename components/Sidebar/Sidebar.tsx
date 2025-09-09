@@ -8,13 +8,13 @@ export const Sidebar = ({ language }: ComponentProps) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-between h-208 md:max-xl:h-285 max-lg:h-15 bg-[#132450] transition-all duration-300 max-sm:w-[320px] ${
-        isOpen ? "lg:w-60" : "w-18"
+      className={`flex flex-col items-center justify-between h-208 md:max-xl:h-285 max-lg:h-15 bg-[#132450] transition-all duration-300 max-sm:w-80 ${
+        isOpen ? "w-60" : "w-18"
       }`}
     >
       <img
-        className={`absolute top-[12px] cursor-pointer transition-transform duration-300 max-lg:hidden ${
-          isOpen ? "left-[193px] rotate-0" : "left-[40px] rotate-180"
+        className={`absolute top-3 cursor-pointer transition-transform duration-300 max-lg:hidden ${
+          isOpen ? "left-48 rotate-0" : "left-10 rotate-180"
         }`}
         src="chevrons-left.svg"
         alt="Toggle Sidebar"
@@ -28,7 +28,7 @@ export const Sidebar = ({ language }: ComponentProps) => {
               <img src="logo.svg" alt="ENAGRAM Logo" />
               <img src="logo-text.svg" alt="ENAGRAM Text" />
             </div>
-            {/* does not function */}
+            {/* burger menu does not function */}
             <img className="lg:hidden" src="menu.svg" alt="Burger Menu" />
           </div>
           <div className="flex flex-col gap-8 text-sm text-white font-normal font-[Helvetica] max-lg:hidden">
@@ -37,11 +37,7 @@ export const Sidebar = ({ language }: ComponentProps) => {
               <p>{t.spellChecker}</p>
             </div>
             <div className="relative flex items-center gap-2 bg-white cursor-pointer">
-              <img
-                src="white-outline.svg"
-                alt="Outline"
-                className="absolute scale-155 translate-x-4 max-lg:hidden"
-              />
+              <img src="white-outline.svg" alt="Outline" className="absolute scale-155 translate-x-4 max-lg:hidden" />
               <img src="spelling.svg" alt="Spelling" className="relative" />
               <p className="text-[#132450] relative">{t.textCompare}</p>
             </div>
@@ -67,10 +63,10 @@ export const Sidebar = ({ language }: ComponentProps) => {
 
       {isOpen && (
         <div className="text-white max-lg:hidden">
-          <hr className="lg:w-[240px] text-[#9EB9FF33]" />
+          <hr className="lg:w-60 text-[#9EB9FF33]" />
           <div className="flex justify-evenly">
-            <div className="flex items-center gap-[5px] m-3 cursor-pointer">
-              <div className="flex items-center justify-center w-[20px] h-[20px] bg-[#9EC8FF] border rounded-2xl">
+            <div className="flex items-center gap-1 m-3 cursor-pointer">
+              <div className="flex items-center justify-center w-5 h-5 bg-[#9EC8FF] border rounded-2xl">
                 <p className="text-[#132450] text-[10px] font-bold pb-[2px]">თ</p>
               </div>
               <p>თამარ ონიანი</p>
