@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
   georgian: {
     keepFormat: "ფორმატის შენარჩუნება",
     startWriting: "დაიწყე წერა...",
@@ -27,4 +27,3 @@ const translations = {
   },
 };
 
-export default translations;

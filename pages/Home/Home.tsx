@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { ExtendedHomeProps } from "../../utilities/types.ts";
-import translations from "../../utilities/translations.ts";
+import { translations } from "../../utilities";
+import type { ExtendedHomeProps } from "../../utilities";
 
 export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHomeProps) => {
   const t = translations[language];
@@ -92,10 +92,10 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
   return (
     <div>
       <div className="p-6">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 max-sm:flex-col max-sm:items-start">
           <div>
             <select
-              className="border rounded-lg py-2 px-3"
+              className="border rounded-lg py-2 px-3 max-sm:w-[288px]"
               name="language"
               id="language-select"
               value={language}
@@ -117,13 +117,13 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
         </div>
         <hr className="text-[#EDEDED] mt-[17px]" />
         <div className="flex flex-col items-center gap-8">
-          <div className="flex items-center gap-3">
-            <div className="bg-[#F0F7FF] w-[542px] h-[432px] mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none">
+          <div className="flex items-center gap-3 max-sm:flex-col">
+            <div className="bg-[#F0F7FF] w-[542px] h-[432px] mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-[330px] max-sm:w-[288px] max-sm:h-[190px]">
               {highlightedA ? (
                 highlightedA
               ) : (
                 <textarea
-                  className="bg-[#F0F7FF] w-full h-full p-3 text-start align-top resize-none 
+                  className="bg-[#F0F7FF] p-3 text-start align-top resize-none 
              focus:outline-none focus:ring-0"
                   placeholder={t.startWriting}
                   value={text1}
@@ -133,14 +133,14 @@ export const Home = ({ language, setLanguage, loading, setLoading }: ExtendedHom
               )}
             </div>
 
-            <img src="../public/Arrow.svg" className="w-[32px] h-[32px]" alt="Arrow" />
+            <img src="Arrow.svg" className="w-8 h-8 max-sm:rotate-90" alt="Arrow" />
 
-            <div className="bg-[#F0F7FF] w-[542px] h-[432px] mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none">
+            <div className="bg-[#F0F7FF] w-135 h-108 mt-6 p-3 overflow-auto whitespace-pre-wrap text-start align-top resize-none max-lg:w-[330px] max-sm:w-[280px] max-sm:h-[190px]">
               {highlightedB ? (
                 highlightedB
               ) : (
                 <textarea
-                  className="bg-[#F0F7FF] w-full h-full p-3 text-start align-top resize-none 
+                  className="bg-[#F0F7FF] p-3 text-start align-top resize-none 
              focus:outline-none focus:ring-0"
                   placeholder={t.startWriting}
                   value={text2}

@@ -7,7 +7,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div className="flex">
+    <div className="flex max-lg:flex-col">
       <Sidebar language={language} />
       <Home language={language} setLanguage={setLanguage} loading={loading} setLoading={setLoading} />
       {loading && (
